@@ -1,0 +1,19 @@
+{
+  "name": "s16.cdn",
+  "version": "1.0.0",
+  "description": "shitty cdn barebones for testing.",
+  "main": "index.min.js",
+  "scripts": {
+    "start": "node index.min.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "cdn"
+  ],
+  "author": "s16dih",
+  "license": "MIT"
+}
