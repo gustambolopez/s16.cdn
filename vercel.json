@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.min.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/github/(?<user>[^/]+)/(?<repoAndBranchOrTag>[^/]+)/(.*)",
+      "dest": "/index.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type,Authorization"
+      }
+    }
+  ]
+}
