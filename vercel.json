@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "devCommand": "node index.min.js",
   "builds": [
     {
       "src": "index.min.js",
@@ -8,31 +9,8 @@
   ],
   "routes": [
     {
-      "src": "/github/(?<user>[^/]+)/(?<repoAndBranchOrTag>[^/]+)/(.*)",
-      "dest": "/index.js",
-      "headers": {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET,OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type,Authorization"
-      }
-    },
-    {
-      "src": "/npm/(?<packageName>[^/]+)(?:@(?<packageVersion>[^/]+))?/(.*)",
-      "dest": "/index.js",
-      "headers": {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET,OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type,Authorization"
-      }
-    },
-    {
-      "src": "/npm/(?<packageName>[^/]+)/(.*)",
-      "dest": "/index.js",
-      "headers": {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET,OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type,Authorization"
-      }
+      "src": "/(.*)",
+      "dest": "index.js"
     }
   ]
 }
