@@ -15,6 +15,24 @@
         "Access-Control-Allow-Methods": "GET,OPTIONS",
         "Access-Control-Allow-Headers": "Content-Type,Authorization"
       }
+    },
+    {
+      "src": "/npm/(?<packageName>[^/]+)(?:@(?<packageVersion>[^/]+))?/(.*)",
+      "dest": "/index.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type,Authorization"
+      }
+    },
+    {
+      "src": "/npm/(?<packageName>[^/]+)/(.*)",
+      "dest": "/index.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type,Authorization"
+      }
     }
   ]
 }
